@@ -17,6 +17,16 @@ body, html, .container, .menu, .content { height: 100%; }
 .menu-bar {
   align-self: center;
 }
+.profile {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: column nowrap;
+  padding-top: 90px;
+}
+
+.profile-item {
+  align-self: center;
+}
 .avatar-wrap {
   width: 64px;
   height: 64px;
@@ -57,17 +67,29 @@ body, html, .container, .menu, .content { height: 100%; }
 
 .content-body {
   height: 100%;
-  margin-top: -1px;
+  margin-top: 15px;
   border: 1px solid #000;
 }
 
-.profile {
+.article-preview {
   display: flex;
   display: -webkit-flex;
   flex-flow: column nowrap;
-  padding-top: 90px;
+  padding-top: 25px;
 }
 
-.profile-item {
-  align-self: center;
+.article-title {
+  max-height: 35px;
+  height: 35px;
+}
+
+.title {
+  margin: 0 0;
+  margin-left: 5px;
+}
+
+.article-short-content {
+  height: 150px;
+  padding-top: 5px;
+  border: 1px solid #000;
 }

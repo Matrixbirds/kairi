@@ -25,7 +25,20 @@
         </div>
         <button class='github-login'>登录</button>
       </div>
-      <div class='content-body'></div>
+      <div class='content-body'>
+        <div class='article-preview'>
+          <div class='article-title'>
+            <h3 class='title'>测试balabala标题</h3>
+          </div>
+          <div class='article-short-content'></div>
+        </div>
+        <div class='article-preview'>
+          <div class='article-title'>
+            <h3 class='title'>balabala小膜仙</h3>
+          </div>
+          <div class='article-short-content'></div>
+        </div>
+      </div>
     </div>
   </div>
   <!--<router-view></router-view>-->
