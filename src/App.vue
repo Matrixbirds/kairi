@@ -19,7 +19,12 @@
       </div>
     </div>
     <div class='content'>
-      <div class='content-header'></div>
+      <div class='content-header'>
+        <div class='login-notice'>
+          如果你想跟我交配，请先 →
+        </div>
+        <button class='github-login'>登录</button>
+      </div>
       <div class='content-body'></div>
     </div>
   </div>

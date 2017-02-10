@@ -35,6 +35,24 @@ body, html, .container, .menu, .content { height: 100%; }
 .content-header {
   height: 56px;
   border: 1px solid #000;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+
+.login-notice {
+  margin: 8px 0;
+  margin-left: auto;
+  align-self: center;
+}
+
+.github-login {
+  border-radius: 1.5;
+  border: 1px solid #666;
+  margin: 8px 0;
+  width: 85px;
+  margin-right: 8px;
+  margin-left: 15px;
 }
 
 .content-body {
