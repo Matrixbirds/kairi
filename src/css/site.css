@@ -1,0 +1,55 @@
+body { margin: 0; overflow: auto; }
+body, html, .container, .menu, .content { height: 100%; }
+.container {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+}
+.menu {
+  overflow: hidden;
+  width: 228px;
+  padding: 0 17px;
+  border: 1px solid #000;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: column nowrap;
+}
+.menu-bar {
+  align-self: center;
+}
+.avatar-wrap {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #000;
+  border-radius: 1.5px;
+}
+.content {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+  width: 100%;
+  margin-left: -1px;
+}
+
+.content-header {
+  height: 56px;
+  border: 1px solid #000;
+}
+
+.content-body {
+  height: 100%;
+  margin-top: -1px;
+  border: 1px solid #000;
+}
+
+.profile {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: column nowrap;
+  padding-top: 90px;
+}
+
+.profile-item {
+  align-self: center;
+}
