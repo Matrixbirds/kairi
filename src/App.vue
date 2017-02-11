@@ -9,17 +9,17 @@
         </div>
       </div>
       <div class='menu-bar home'>
-        <router-link to="/home" class='menu-bar-button' active-class='active' exact>
+        <router-link to="/home" class='menu-bar-button'>
           <h5>home</h5>
         </router-link>
       </div>
       <div class='menu-bar archives'>
-        <router-link to="/archives" class='menu-bar-button' active-class='active'  exact>
+        <router-link to="/archives" class='menu-bar-button'>
           <h5>archives</h5>
         </router-link>
       </div>
       <div class='menu-bar about'>
-        <router-link to="/about" class='menu-bar-button' active-class='active'  exact>
+        <router-link to="/about" class='menu-bar-button'>
           <h5>about</h5>
         </router-link>
       </div>
@@ -34,10 +34,10 @@
       <router-view></router-view>
     </div>
   </div>
-  <!--<router-view></router-view>-->
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: 'app',
 };
@@ -48,13 +48,15 @@ export default {
   text-decoration: none;
 }
 
-.menu-bar-button:hover h5{
-  text-decoration: underline;
-  color: aliceblue;
-  background-color: black;
-}
-.active h5 {
+.active h5, .active:focus h5 {
   text-decoration: underline;
   color: red;
 }
+
+.menu-bar-button:hover h5 {
+  color: white;
+  background-color: black;
+}
+
+
 </style>
