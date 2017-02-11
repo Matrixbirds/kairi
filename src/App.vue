@@ -29,17 +29,27 @@
         <div class='login-notice'>
           如果你想跟我交配，请先 →
         </div>
-        <button class='github-login'>登录</button>
+        <button class='login-modal' @click='showLogin'>登录</button>
       </div>
       <router-view></router-view>
     </div>
+    <login ref='login'></login>
   </div>
 </template>
 
 <script>
-/* eslint-disable */
+import login from './components/login';
+
 export default {
   name: 'app',
+  components: {
+    login,
+  },
+  methods: {
+    showLogin() {
+      this.$refs.login.show();
+    },
+  },
 };
 </script>
 

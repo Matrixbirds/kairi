@@ -58,7 +58,7 @@ body, html, .container, .menu, .content { height: 100%; }
   align-self: center;
 }
 
-.github-login {
+.login-modal {
   border-radius: 1.5;
   border: 1px solid #666;
   margin: 8px 0;
