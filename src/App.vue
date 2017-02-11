@@ -29,11 +29,11 @@
         <div class='login-notice'>
           如果你想跟我交配，请先 →
         </div>
-        <button class='login-modal' @click='showLogin'>登录</button>
+        <button class='login-modal' @click='toggleLogin'>登录</button>
       </div>
       <router-view></router-view>
     </div>
-    <login ref='login'></login>
+    <login :state='show' v-on:toggle-show='toggleLogin' v-if='show'></login>
   </div>
 </template>
 
@@ -45,9 +45,14 @@ export default {
   components: {
     login,
   },
+  data() {
+    return {
+      show: false,
+    };
+  },
   methods: {
-    showLogin() {
-      this.$refs.login.show();
+    toggleLogin() {
+      this.show = !this.show;
     },
   },
 };

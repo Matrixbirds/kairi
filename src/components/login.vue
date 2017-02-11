@@ -1,11 +1,11 @@
 <template>
-  <transition name="login" v-if="state">
+  <transition name="login">
     <div class='modal-mask'>
       <div class='modal-wrapper'>
         <div class='modal-container'>
           <div class='modal-header'>
             <h3 class='title'>欢迎来到Matrixbirds的个人博客</h3>
-            <button class='close-button' @click='hide'>X</button>
+            <button class='close-button' @click='change'>X</button>
           </div>
           <div class='modal-body'>
             <p>选择交配方式。只支持Github方式。</p>
@@ -25,17 +25,10 @@
 <script>
 export default {
   name: 'login',
-  data() {
-    return {
-      state: false,
-    };
-  },
+  props: ['state'],
   methods: {
-    show() {
-      this.state = true;
-    },
-    hide() {
-      this.state = false;
+    change() {
+      this.$emit('toggle-show');
     },
   },
 };
