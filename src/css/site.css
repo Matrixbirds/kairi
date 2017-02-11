@@ -45,7 +45,8 @@ body, html, .container, .menu, .content { height: 100%; }
 }
 
 .content-header {
-  height: 56px;
+  min-height: 58px;
+  max-height: 58px;
   border: 1px solid #000;
   display: flex;
   display: -webkit-flex;

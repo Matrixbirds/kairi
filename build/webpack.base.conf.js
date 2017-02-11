@@ -29,8 +29,8 @@ module.exports = {
       'src': resolve('src'),
       'assets': resolve('src/assets'),
       'css': resolve('src/css'),
-      'components': resolve('src/components')
-    }
+      'components': resolve('src/components'),
+    },
   },
   module: {
     rules: [
