@@ -9,13 +9,19 @@
         </div>
       </div>
       <div class='menu-bar home'>
-        <h5>home</h5>
+        <router-link to="/home" class='menu-bar-button' active-class='active' exact>
+          <h5>home</h5>
+        </router-link>
       </div>
       <div class='menu-bar archives'>
-        <h5>archives</h5>
+        <router-link to="/archives" class='menu-bar-button' active-class='active'  exact>
+          <h5>archives</h5>
+        </router-link>
       </div>
       <div class='menu-bar about'>
-        <h5>About</h5>
+        <router-link to="/about" class='menu-bar-button' active-class='active'  exact>
+          <h5>about</h5>
+        </router-link>
       </div>
     </div>
     <div class='content'>
@@ -25,20 +31,7 @@
         </div>
         <button class='github-login'>登录</button>
       </div>
-      <div class='content-body'>
-        <div class='article-preview'>
-          <div class='article-title'>
-            <h3 class='title'>测试balabala标题</h3>
-          </div>
-          <div class='article-short-content'></div>
-        </div>
-        <div class='article-preview'>
-          <div class='article-title'>
-            <h3 class='title'>balabala小膜仙</h3>
-          </div>
-          <div class='article-short-content'></div>
-        </div>
-      </div>
+      <router-view></router-view>
     </div>
   </div>
   <!--<router-view></router-view>-->
@@ -51,9 +44,17 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.menu-bar-button {
+  text-decoration: none;
+}
+
+.menu-bar-button:hover h5{
+  text-decoration: underline;
+  color: aliceblue;
+  background-color: black;
+}
+.active h5 {
+  text-decoration: underline;
+  color: red;
 }
 </style>
