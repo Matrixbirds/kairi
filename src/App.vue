@@ -48,15 +48,16 @@ export default {
   text-decoration: none;
 }
 
-.active h5, .active:focus h5 {
-  text-decoration: underline;
+.active {
   color: red;
+  background-color: clear;
+  text-decoration: underline;
 }
 
-.menu-bar-button:hover h5 {
+.menu-bar-button:hover {
+  display: block;
+  text-decoration: underline;
   color: white;
   background-color: black;
 }
-
-
 </style>
