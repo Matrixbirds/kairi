@@ -31,7 +31,9 @@
         </div>
         <button class='login-modal' @click='toggleLogin'>登录</button>
       </div>
-      <router-view></router-view>
+      <div class='content-body'>
+        <router-view></router-view>
+      </div>
     </div>
     <login :state='show' v-on:toggle-show='toggleLogin' v-if='show'></login>
   </div>

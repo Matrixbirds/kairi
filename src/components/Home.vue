@@ -1,48 +1,82 @@
 <template>
-  <div class='content-body'>
-    <div class='article-preview'>
+  <div id='home' class='article-container'>
+    <div class='article-preview' v-for="article in articles">
       <div class='article-title'>
-        <h3 class='title'>测试balabala标题</h3>
+        <h3 class='title'>{{ article.title }}</h3>
       </div>
-      <div class='article-short-content'></div>
-    </div>
-    <div class='article-preview'>
-      <div class='article-title'>
-        <h3 class='title'>balabala小膜仙</h3>
-      </div>
-      <div class='article-short-content'></div>
+      <div class='article-short-content'>{{ article.content }}</div>
     </div>
   </div>
 </template>
 
 <script>
+import Article from '../models/article';
+
 export default {
   name: 'home',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      articlesData: [],
     };
+  },
+  computed: {
+    articles: {
+      set({ articles = [] }) {
+        this.articlesData = articles;
+      },
+      get() {
+        return this.articlesData;
+      },
+    },
+  },
+  mounted() {
+    Article.fetchData().then((data) => {
+      this.articles = data;
+    });
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+.article-container {
+  padding: 0 25px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.article-preview {
+  border: 1px solid black;
+  box-shadow: 0 0 1em #8e8d88;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: column nowrap;
+  margin-top: 25px;
 }
 
-li {
+.article-title {
+  max-height: 35px;
+  height: 35px;
+  padding: 5px 15px;
+}
+
+.title {
+  margin: 0 0;
   display: inline-block;
-  margin: 0 10px;
+  vertical-align: text-top;
+  width: 24em;
+  height: 100%;
+  white-space: nowrap;
+  line-height: 2em;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-a {
-  color: #42b983;
+.article-short-content {
+  padding-left: 10px;
+  max-height: 180px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  padding: 0px 15px;
+  padding-bottom: 15px;
 }
+
 </style>

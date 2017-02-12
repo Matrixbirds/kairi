@@ -69,30 +69,6 @@ body, html, .container, .menu, .content { height: 100%; }
 }
 
 .content-body {
-  height: 100%;
-  margin-top: 15px;
-  border: 1px solid #000;
-}
-
-.article-preview {
-  display: flex;
-  display: -webkit-flex;
-  flex-flow: column nowrap;
-  padding-top: 25px;
-}
-
-.article-title {
-  max-height: 35px;
-  height: 35px;
-}
-
-.title {
-  margin: 0 0;
-  margin-left: 5px;
-}
-
-.article-short-content {
-  height: 150px;
-  padding-top: 5px;
-  border: 1px solid #000;
+  min-height: 370px;
+  margin-top: 14px;
 }
