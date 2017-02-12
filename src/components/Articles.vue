@@ -1,9 +1,11 @@
 <template>
-  <div id='home' class='article-container'>
+  <div id='articles' class='article-container'>
     <div class='article-preview' v-for="article in articles">
-      <div class='article-title'>
-        <h3 class='title'>{{ article.title }}</h3>
-      </div>
+      <router-link :to="{ name: 'article', params: { id: article.id }}" class='menu-bar-button'>
+        <div class='article-title'>
+          <h3 class='title'>{{ article.title }}</h3>
+        </div>
+      </router-link>
       <div class='article-short-content'>{{ article.content }}</div>
     </div>
   </div>
@@ -13,7 +15,7 @@
 import Article from '../models/article';
 
 export default {
-  name: 'home',
+  name: 'articles',
   data() {
     return {
       articlesData: [],

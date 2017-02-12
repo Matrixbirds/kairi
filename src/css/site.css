@@ -6,9 +6,9 @@ body, html, .container, .menu, .content { height: 100%; }
   flex-flow: row nowrap;
 }
 .menu {
-  overflow: hidden;
   position: fixed;
   width: 228px;
+  min-height: 480px;
   padding: 0 17px;
   border: 1px solid #000;
   display: flex;
@@ -69,6 +69,6 @@ body, html, .container, .menu, .content { height: 100%; }
 }
 
 .content-body {
-  min-height: 370px;
+  min-height: 380px;
   margin-top: 14px;
 }

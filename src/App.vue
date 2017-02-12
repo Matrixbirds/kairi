@@ -9,8 +9,8 @@
         </div>
       </div>
       <div class='menu-bar home'>
-        <router-link to="/home" class='menu-bar-button'>
-          <h5>home</h5>
+        <router-link to="/articles" class='menu-bar-button'>
+          <h5>articles</h5>
         </router-link>
       </div>
       <div class='menu-bar archives'>
