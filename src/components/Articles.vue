@@ -23,8 +23,8 @@ export default {
   },
   computed: {
     articles: {
-      set({ articles = [] }) {
-        this.articlesData = articles;
+      set(val) {
+        this.articlesData = val;
       },
       get() {
         return this.articlesData;
