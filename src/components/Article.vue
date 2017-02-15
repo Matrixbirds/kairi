@@ -1,14 +1,11 @@
 <template>
-  <div id='article'>
-    <p>
-      {{ article.id }}
-    </p>
-    <p>
-      {{ article.title }}
-    </p>
-    <p>
-      {{ article.content }}
-    </p>
+  <div id='article' class='article-wrapper'>
+    <div class='articleboard'>
+      <h3 class='article-title'>{{ article.title }}</h3>
+      <p class='article-body'>
+        {{ article.content }}
+      </p>
+    </div>
   </div>
 </template>
 
@@ -42,4 +39,18 @@ export default {
 </script>
 
 <style scoped>
+.article-wrapper {
+  margin: auto 2%;
+}
+
+.articleboard {
+  padding: 0 1%;
+  box-shadow: 10px 5px 5px black;
+  border: 3px solid #788488;
+  min-height: 700px;
+}
+
+.article-body {
+  font-size: 20px;
+}
 </style>
